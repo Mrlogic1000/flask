@@ -28,10 +28,10 @@
               configuring devices, installing systems, and ensuring optimal performance of IT infrastructure. Whether
               it’s repairing a workstation, setting up secure networks, or assisting users with day-to-day technical
               challenges, I take pride in delivering prompt and effective support.
-              </p>
+            </p>
 
 
-              <!-- Key skills and experience include:
+            <!-- Key skills and experience include:
 
               Troubleshooting desktops, laptops, printers, and mobile devices.
 
@@ -41,7 +41,7 @@
 
               Maintaining system security, backups, and updates to minimize downtime. -->
 
-             <p> I am always eager to learn new technologies and improve my technical knowledge to keep up with the
+            <p> I am always eager to learn new technologies and improve my technical knowledge to keep up with the
               fast-paced IT environment. My goal is to not only fix problems but to help prevent them, ensuring users
               can work efficiently and securely.</p>
             </p>
@@ -51,13 +51,13 @@
         <div class="row">
           <div class="personal-info padd-15">
             <div class="row">
-              <div class="info-item padd-15">
+              <!-- <div class="info-item padd-15">
                 <p>Birthday : <span>1 june 1990</span></p>
-              </div>
+              </div> -->
 
-              <div class="info-item padd-15">
+              <!-- <div class="info-item padd-15">
                 <p>Age : <span>35</span></p>
-              </div>
+              </div> -->
 
               <div class="info-item padd-15">
                 <p>Website : <span>www.domain.com</span></p>
@@ -136,65 +136,45 @@
           <div class="education padd-15">
             <h3 class="title">Education</h3>
 
+
             <div class="row">
               <div class="timeline-box padd-15">
                 <div class="timeline shadow-dark">
                   <!-- ===== timeline item ===== -->
+                  {% for edu in educations %}
+                  
                   <div class="timeline-item">
+
                     <div class="circle-dot"></div>
 
                     <h3 class="timeline-date">
-                      <i class="fa fa-calendar"></i> 2013 - 2015
+                      <i class="fa fa-calendar"></i> {{ edu['year']}}
                     </h3>
                     <h4 class="timeline-title">
-                      Master in Computer Science
+                      {{ edu['title']}}
                     </h4>
+                    <p class="timeline-text">
+                      <strong>School: </strong>{{ edu['school']}}
+                    </p>
 
                     <p class="timeline-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. A, maiores. Facere, minus? Quam minus autem
-                      quidem similique dignissimos cumque dolorum quis
-                      optio blanditiis, doloremque veritatis.
+                     <strong>Relevant Coursework: </strong> 
+                     {%for i in  edu['Relevant Coursework'] %}
+                     
+                        <ul class="timeline-text" style="list-style:disc;">
+                          <li><p class="timeline-text">{{i}}</p></li>
+                        </ul>
+
+
+                     {% endfor %}
                     </p>
-                  </div>
-
-                  <!-- ===== timeline item ===== -->
-                  <div class="timeline-item">
-                    <div class="circle-dot"></div>
-
-                    <h3 class="timeline-date">
-                      <i class="fa fa-calendar"></i> 2013 - 2015
-                    </h3>
-                    <h4 class="timeline-title">
-                      Master in Computer Science
-                    </h4>
-
                     <p class="timeline-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. A, maiores. Facere, minus? Quam minus autem
-                      quidem similique dignissimos cumque dolorum quis
-                      optio blanditiis, doloremque veritatis.
+                     <strong>Capstone Project: </strong>{{ edu['Capstone Project']}}
                     </p>
                   </div>
+                    {% endfor %}
 
-                  <!-- ===== timeline item ===== -->
-                  <div class="timeline-item">
-                    <div class="circle-dot"></div>
-
-                    <h3 class="timeline-date">
-                      <i class="fa fa-calendar"></i> 2013 - 2015
-                    </h3>
-                    <h4 class="timeline-title">
-                      Master in Computer Science
-                    </h4>
-
-                    <p class="timeline-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. A, maiores. Facere, minus? Quam minus autem
-                      quidem similique dignissimos cumque dolorum quis
-                      optio blanditiis, doloremque veritatis.
-                    </p>
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -207,61 +187,31 @@
               <div class="timeline-box padd-15">
                 <div class="timeline shadow-dark">
                   <!-- ===== timeline item ===== -->
-                  <div class="timeline-item">
+                   {% for experience in experiences %}
+                    <div class="timeline-item">
                     <div class="circle-dot"></div>
 
                     <h3 class="timeline-date">
-                      <i class="fa fa-calendar"></i> 2013 - 2015
+                      <i class="fa fa-calendar"></i> {{experience['year']}}
                     </h3>
                     <h4 class="timeline-title">
-                      Master in Computer Science
+                      {{experience['title']}}
                     </h4>
+                   <h4 class="timeline-title" style="display: inline-block;"> {{experience['company']}} </h4> <span class="timeline-text">-{{experience['area']}}</span>
 
-                    <p class="timeline-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. A, maiores. Facere, minus? Quam minus autem
-                      quidem similique dignissimos cumque dolorum quis
-                      optio blanditiis, doloremque veritatis.
-                    </p>
+                    {% for i in experience['description']%}
+                    <ul class="timeline-text" style="list-style:disc;">
+                      <li>{{i}}</li>
+                    </ul>
+                    
+                    {% endfor %}
                   </div>
+                  {% endfor %}
 
-                  <!-- ===== timeline item ===== -->
-                  <div class="timeline-item">
-                    <div class="circle-dot"></div>
+                 
 
-                    <h3 class="timeline-date">
-                      <i class="fa fa-calendar"></i> 2013 - 2015
-                    </h3>
-                    <h4 class="timeline-title">
-                      Master in Computer Science
-                    </h4>
-
-                    <p class="timeline-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. A, maiores. Facere, minus? Quam minus autem
-                      quidem similique dignissimos cumque dolorum quis
-                      optio blanditiis, doloremque veritatis.
-                    </p>
-                  </div>
-
-                  <!-- ===== timeline item ===== -->
-                  <div class="timeline-item">
-                    <div class="circle-dot"></div>
-
-                    <h3 class="timeline-date">
-                      <i class="fa fa-calendar"></i> 2013 - 2015
-                    </h3>
-                    <h4 class="timeline-title">
-                      Master in Computer Science
-                    </h4>
-
-                    <p class="timeline-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. A, maiores. Facere, minus? Quam minus autem
-                      quidem similique dignissimos cumque dolorum quis
-                      optio blanditiis, doloremque veritatis.
-                    </p>
-                  </div>
+                 
+                 
                 </div>
               </div>
             </div>

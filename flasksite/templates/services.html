@@ -14,100 +14,31 @@
 
             <div class="row">
               <!-- ===== Service item Start ====== -->
+               {% for work in works %}
               <div class="service-item padd-15">
                 <div class="service-item-inner">
                   <div class="icon">
-                    <i class="fa fa-mobile-alt"></i>
+                    <i class="fa {{work['icon']}}"></i>
                   </div>
-
-                  <h4>Web Design</h4>
+                  <h4>{{ work['title'] }}</h4>
+                  {% for i in work['option'] %}
+                  
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Nihil velit ab itaque.
+                    {{i}}
                   </p>
+                  {% endfor %}
                 </div>
               </div>
+              {% endfor %}
               <!-- ===== Service item End ====== -->
 
-              <!-- ===== Service item Start ====== -->
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon">
-                    <i class="fa fa-laptop-code"></i>
-                  </div>
+             
 
-                  <h4>Web Design</h4>
-                  <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Nihil velit ab itaque.
-                  </p>
-                </div>
-              </div>
-              <!-- ===== Service item End ====== -->
+              
 
-              <!-- ===== Service item Start ====== -->
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon">
-                    <i class="fa fa-palette"></i>
-                  </div>
+             
 
-                  <h4>Web Design</h4>
-                  <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Nihil velit ab itaque.
-                  </p>
-                </div>
-              </div>
-              <!-- ===== Service item End ====== -->
-
-              <!-- ===== Service item Start ====== -->
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon">
-                    <i class="fa fa-code"></i>
-                  </div>
-
-                  <h4>Web Design</h4>
-                  <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Nihil velit ab itaque.
-                  </p>
-                </div>
-              </div>
-              <!-- ===== Service item End ====== -->
-
-              <!-- ===== Service item Start ====== -->
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon">
-                    <i class="fa fa-search"></i>
-                  </div>
-
-                  <h4>Web Design</h4>
-                  <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Nihil velit ab itaque.
-                  </p>
-                </div>
-              </div>
-              <!-- ===== Service item End ====== -->
-
-              <!-- ===== Service item Start ====== -->
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon">
-                    <i class="fa fa-bullhorn"></i>
-                  </div>
-
-                  <h4>Web Design</h4>
-                  <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Nihil velit ab itaque.
-                  </p>
-                </div>
-              </div>
-              <!-- ===== Service item End ====== -->
+              
             </div>
           </div>
         </section>

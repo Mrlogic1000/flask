@@ -1,44 +1,74 @@
+<!-- ===== Aside End ===== -->
+{% extends "public_template.html" %}
+{% block main %}
 
+<!-- ===== Main Content Start ===== -->
 
-      <!-- ===== Aside End ===== -->
-       {% extends "public_template.html" %}
-       {% block main %}
+<!-- ===== Home Section Start ===== -->
+<section class="home active section" id="home">
+  <div class="container">
+    <div class="row">
+      <div class="home-info padd-15">
+        <h3 class="hello">
+          Hello, my name is <span class="name">Adelakun Muheez</span>
+        </h3>
+        <h3 class="my-profession">
+          I' m a <span class="typing">web designer</span>
+        </h3>
 
-      <!-- ===== Main Content Start ===== -->
+        <p>
+          I’m an experienced IT Technician with a strong passion for solving technical problems and keeping systems
+          running smoothly.
+          With 10+ years of hands-on experience in IT support, hardware troubleshooting, network administration, and
+          system maintenance, I help individuals and businesses stay connected and productive.         
+        <br>
+        <!-- <br> -->
+         Whether it's setting up new hardware, maintaining secure and efficient networks, or providing fast and
+          reliable technical support, I bring a proactive mindset and a commitment to clear communication. My goal is
+          always to resolve issues before they impact operations — and to make technology easier for everyone
+          <br>
+          
+        <!-- <span style="display: block; margin: 10px 0; font-weight: bold;"> I’m skilled in:</span>
+       
+        Desktop and laptop repair (Windows, macOS, Linux) <br>
+           Network setup and troubleshooting (LAN, Wi-Fi, VPNs) <br>
+           Software installation, updates, and patch management <br>
+           Data backup and recovery solutions ...<br> -->
+        
+        
+        </p>
+       
+        
+        
+        
      
-        <!-- ===== Home Section Start ===== -->
-        <section class="home active section" id="home">
-          <div class="container">
-            <div class="row">
-              <div class="home-info padd-15">
-                <h3 class="hello">
-                  Hello, my name is <span class="name">Adelakun Muheez</span>
-                </h3>
-                <h3 class="my-profession">
-                  I' m a <span class="typing">web designer</span>
-                </h3>
-
-                <p>
-                  I'm a web Designer with extensive experience for over 10
-                  years.My expertise is to create and website design,graphic
-                  design, and many more...
-                </p>
-
-                <a href="#" class="btn">Download CV</a>
-              </div>
-
-              <div class="home-img padd-15">
-                <img src="{{url_for('static', filename='images/hero.jpg')}}" alt="" />
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- ===== Home Section End ===== -->
-
-        <!-- ===== About Section Start ===== -->
-        
-        <!-- ===== About Section End ===== -->
 
         
-             {% endblock %}
-    
+
+       
+
+        
+
+        
+
+        
+
+        
+
+        <a href="#" class="btn">Download CV</a>
+      </div>
+
+      <div class="home-img padd-15">
+        <img src="{{url_for('static', filename='images/hero.jpg')}}" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== Home Section End ===== -->
+
+<!-- ===== About Section Start ===== -->
+
+<!-- ===== About Section End ===== -->
+
+
+{% endblock %}
