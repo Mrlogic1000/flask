@@ -19,25 +19,54 @@ educations = [{
     'Capstone Project':' AI-Powered Chatbot for Campus Navigation'
 },
 {
-    'year':'2010-2013',
-    'title':'Cisco Certified Internetwork Expert',
-    'school':'CISCO Academy',
+    'year':'2025',
+    'title':'Network Basics',
+    'school':'CISCO Network Academy',
     'Relevant Coursework': [
-        'CISCO Enterprise solutions', 
-     'Dual-stack (IPv4 and IPv6) architecture', 
-     'Routing protocols:OSPF,EIGRP, BGP, MPLS,IS-IS',
-     'Network automation and programmability (Python, APIs, NetConf/YANG)',
-     'Software-Defined Networking (SDN): Cisco DNA Center, SD-Access',
-     'Infrastructure Security',
-     'QoS (Quality of Service)',
-     'Network Assurance and monitoring'
+        'Application Layer Services', 
+     'IPv4 Address', 
+     'Network Media',
+     'Network Types',
+     'Protocol Standards',
+     
      ],
-    'Capstone Project':'Repair and Assemble of Computer'
+    'Capstone Project':'Participated in up to 13 Cisco Packet Tracer activities.'
+},
+{
+    'year':'2025',
+    'title':'Network Addressing and Basic Troubleshooting',
+    'school':'CISCO Network Academy',
+    'Relevant Coursework': [
+        'CISCO Routers', 
+     'CISCO Switches', 
+     'Coper and Fiber Cabling',
+     'IPv6 Addressing',
+     'Network Troubleshooting',
+     
+     ],
+    'Capstone Project':'Practiced troubleshooting skills to keep a network up and running in up to 13 Cisco Packet Tracer activities'
+},
+{
+    'year':'2025',
+    'title':'Ethical Hacking',
+    'school':'CISCO Network Academy',
+    'Relevant Coursework': [
+        'Exploiting Applications', 
+     'Exploiting Networks', 
+     'IoT Security',
+     'Penetration Testing',
+     'Penetration Tools',
+     'Reporting',
+     'Social Engineering',
+     'Vulnerability Assessment'
+     'Vulnerability Scanning'
+     ],
+    'Capstone Project':'completed up to 34 hands-on activities using Kali Linux, WebSploit, and other tools.'
 },
 {
     'year':'2025',
     'title':'Cisco Certified Internetwork Expert',
-    'school':'CISCO Academy',
+    'school':'CISCO Network Academy',
     'Relevant Coursework': [
         'Covered ethical hacking methodology', 
      'penetration testing', 
