@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, send_file
 
 
 views = Blueprint(__name__, '/')
@@ -17,6 +17,13 @@ educations = [{
     'school':'Polytechnic of Ibadan-Oyo state',
     'Relevant Coursework':[' Data Structure', 'Computer Networking', 'Web Development'],
     'Capstone Project':' AI-Powered Chatbot for Campus Navigation'
+},
+{
+    'year':'2010-2013',
+    'title':'Certificate of Competence in Computer Engineering',
+    'school':'Federal Ministry Of Labour',
+    'Relevant Coursework':['Repair of computer','Assemble of Computer'],
+    'Capstone Project':'Repair and Assemble of Computer'
 },
 {
     'year':'2025',
@@ -77,13 +84,7 @@ educations = [{
      ],
     'Capstone Project':'Repair and Assemble of Computer'
 },
-{
-    'year':'2010-2013',
-    'title':'Certificate of Competence in Computer Engineering',
-    'school':'Federal Ministry Of Labour',
-    'Relevant Coursework':['Repair of computer','Assemble of Computer'],
-    'Capstone Project':'Repair and Assemble of Computer'
-},
+
 
 ]
 
@@ -251,3 +252,8 @@ def portfolio():
 @views.route("/services")
 def services():
     return render_template("services.html",active='services', works=works)
+
+@views.route("/download")
+def download_file():
+    file = "myResume.pdf"
+    return send_file(file, as_attachment=True)
