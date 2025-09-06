@@ -7,6 +7,10 @@ import os
 app = Flask(__name__)
 
 load_dotenv()
+
+app.config['UPLOAD_FOLDER'] = 'static/uploads' # Example upload folder
+app.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg', 'gif'}
+
 app.register_blueprint(views, url_prefix="/" )
 app.register_blueprint(admins, url_prefix="/admin" )
 
