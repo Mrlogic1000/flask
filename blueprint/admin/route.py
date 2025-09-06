@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect,current_app
+from flask import Blueprint, render_template, request, redirect,current_app,url_for, flash
 from werkzeug.utils import secure_filename
 
 from datetime import datetime
@@ -14,15 +14,17 @@ def dashboard():
 def upload_image():
     if request.method == 'POST':
         if 'image_file' not in request.files:
-            return "No file part"
+            return redirect(url_for('admin.upload_image'))
         file = request.files['image_file']
         if file.filename == '':
-            return "No selected file"
+            flash("No selected file")
+            return redirect(url_for('admin.upload_image'))
         if file and allowed_file(file.filename): # Define allowed_file function
             filename = secure_filename(file.filename)
             upload_path = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
             file.save(upload_path)
-            return f"Image uploaded successfully: {filename}"
+            flash("Image uploaded successfully: {filename}","success")
+            return redirect(url_for('admin.upload_image'))
     return render_template('uploads.html')
 
 def allowed_file(filename):
