@@ -67,7 +67,7 @@
 
         <ul class="nav">
           <li>
-            <a href="/" class="{% if active =='home' %}active{% endif %}"><i class="fa fa-home"></i> Home</a>
+            <a href="/admin" class="{% if active =='home' %}active{% endif %}"><i class="fa fa-home"></i>Dashboard</a>
           </li>
 
           <li>
@@ -83,7 +83,7 @@
           </li>
 
           <li>
-            <a href="contact" class="{% if active =='contact' %}active{% endif %}"><i class="fa fa-comments"></i>Contact</a>
+            <a href="uploads" class="{% if active =='uploads' %}active{% endif %}"><i class="fa fa-comments"></i>Uploads</a>
           </li>
         </ul>
       </div>
@@ -131,6 +131,7 @@
     <script src="{{url_for('static', filename='js/script.js')}}" defer></script>
 
     <script src="{{url_for('static',filename='js/style-switcher.js')}}" defer></script>
+    <script src="{{url_for('static',filename='js/uploads.js')}}" defer></script>
 
       
   </body>

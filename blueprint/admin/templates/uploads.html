@@ -1,0 +1,23 @@
+{% extends "admin_template.html" %}
+
+{% block title %}Uploads{% endblock %}
+{% block main %} 
+
+<!-- ===== Contact Section Start ===== -->
+        <section class="section" id="contact">
+          <div class="hero">
+            <label for="input-file" id="drop-area">
+                <input type="file" accept="image/*" name="Uploads" id="input-file" hidden>
+                <div id="img-view">
+                    <!-- <i class="fa fa-upload fa-5x" aria-hidden="true"></i> -->
+                    <img src="{{url_for('static',filename='images/icon.png')}}" alt="">
+                    <p>Drag and drop or click here <br>to upload</p>
+                    <span>Upload any images from desktop</span>
+                </div>
+            </label>
+
+          </div>
+         
+        </section>
+        <!-- ===== Contact Section End ===== -->
+{% endblock %}

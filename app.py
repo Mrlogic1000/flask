@@ -1,5 +1,6 @@
 from flask import Flask
-from views import views
+from blueprint.public.route import views
+from blueprint.admin.route import admins
 from dotenv import load_dotenv
 from flask_mail import Mail, Message
 import os
@@ -7,6 +8,7 @@ app = Flask(__name__)
 
 load_dotenv()
 app.register_blueprint(views, url_prefix="/" )
+app.register_blueprint(admins, url_prefix="/admin" )
 
 print(os.getenv('SCREAT_KEY'))
 
