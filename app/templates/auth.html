@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock %}</title>
+
+    <!-- ===== CSS Files ===== -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/skins/color-1.css')}}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- ====== Style Switcher ====== -->
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/skins/color-1.css')}}"
+      class="alternate-style"
+      title="color-1"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/skins/color-2.css')}}"
+      class="alternate-style"
+      title="color-2"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/skins/color-3.css')}}"
+      class="alternate-style"
+      title="color-3"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/skins/color-4.css')}}"
+      class="alternate-style"
+      title="color-4"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/skins/color-5.css')}}"
+      class="alternate-style"
+      title="color-5"
+      disabled
+    />
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style-switcher.css')}}" />
+  </head>
+  <body style="max-height: 100vh;">
+    <!-- ===== Main Container Start ===== -->
+    <div class="main-container">
+      <!-- ===== Aside Start ===== -->
+      
+       <div class="main-content">
+        <!-- ===== Contact Section Start ===== -->
+<section class="contact section2" id="contact" >
+    <div  style="display: flex;flex-direction: column; justify-content: space-between; max-height: 100vh;">
+
+
+
+        <div style="padding-top: 30px;">
+            <h3 class="contact-title padd-15">Have You Any Questions ?</h3>
+            <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICES</h4>
+        </div>
+        <div class="row" style="display: flex;   height: 100%; justify-content: center;">
+            <!-- ===== Contact info item start ====== -->
+            <div class="contact-info-item2">
+                <div class="icon"><i class="fa fa-phone"></i></div>
+
+                <h4>Call Us On</h4>
+                <p>+234 7069344331</p>
+
+            </div>
+            <!-- ===== Contact info item end ====== -->
+
+            <!-- ===== Contact info item start ====== -->
+            <div class="contact-info-item2">
+                <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
+
+                <h4>Office</h4>
+                <p>Jericho Ibadan</p>
+            </div>
+            <!-- ===== Contact info item end ====== -->
+
+            <!-- ===== Contact info item start ====== -->
+            <div class="contact-info-item2">
+                <div class="icon"><i class="fa fa-envelope"></i></div>
+
+                <h4>Email</h4>
+                <p>mrlogic1987@gmail.com</p>
+            </div>
+            <!-- ===== Contact info item end ====== -->
+
+            <!-- ===== Contact info item start ====== -->
+            <div class="contact-info-item2">
+                <div class="icon"><i class="fa fa-globe-europe"></i></div>
+
+                <h4>Website</h4>
+                <p>www.mrlogicglobaltech.com</p>
+            </div>
+            <!-- ===== Contact info item end ====== -->
+        </div>
+
+        <!-- <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
+        <h4 class="contact-sub-title padd-15">
+            I'M VERY RESPOSIVE TO MESSAGES
+        </h4> -->
+
+      {% block main %}
+      
+      
+      {% endblock %}
+      </section>
+      
+              </div>
+      <!-- ===== Main Content End ===== -->
+    </div>
+    <!-- ===== Main Container End ===== -->
+
+    <!-- ===== Style Switcher Start ===== -->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i class="fas fa-cog fa-spin"></i>
+      </div>
+
+      <div class="day-night s-icon">
+        <i class="fas"></i>
+      </div>
+
+      <h4>Theme Colors</h4>
+
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+      </div>
+    </div>
+    <!-- ===== Style Switcher End ===== -->
+
+    <!-- ===== JS Files ===== -->
+
+<script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+
+    <script src="{{url_for('static', filename='js/script.js')}}" defer></script>
+
+    <script src="{{url_for('static',filename='js/style-switcher.js')}}" defer></script>
+    <script src="{{url_for('static', filename='js/form.js')}}" defer></script>
+
+      
+  </body>
+  </html>
+  

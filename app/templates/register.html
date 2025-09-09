@@ -1,0 +1,41 @@
+{% extends "auth.html" %}
+
+{% block title %} Register {% endblock %}
+{% block main %}
+
+
+        <!-- ====== Contact Form ====== -->
+        <form class="row-container" method="POST">
+            <div class="row" >
+            <div class="contact-form padd-15">
+                
+                    <div class="form-item  padd-15">
+                        <div class="form-group">
+                            <input type="text" name="username" class="form-control" placeholder="Name" />
+                        </div>
+                    </div>
+
+                    <div class="form-item padd-15">
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="Email" />
+                        </div>
+                    </div>        
+
+                
+
+                
+
+                <div class="row">
+                    <div class="form-item col-12 padd-15">
+                        <button type="submit" class="btn">Register</button>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+         <a href="/login"><button class="btn">Login</button></a>
+    </div>
+
+<!-- ===== Contact Section End ===== -->
+{% endblock %}

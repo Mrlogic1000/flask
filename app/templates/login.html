@@ -1,0 +1,49 @@
+{% extends "auth.html" %}
+
+{% block title %} Login {% endblock %}
+{% block main %}
+
+
+<!-- ====== Contact Form ====== -->
+<form id="auth_form" action="{{url_for('auth.login')}}" method="post" class="row-container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <ul class="flashes">
+        {% for category, message in messages %}
+        <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    <div class="row">
+        <div class="contact-form padd-15">
+
+            <div class="form-item  padd-15">
+                <div class="form-group">
+                    <input type="text" name="username" value="{{username}}" class="form-control" placeholder="Name" />
+                </div>
+            </div>
+
+            <div class="form-item padd-15">
+                <div class="form-group">
+                    <input type="password" name="password" value="{{password}}" class="form-control" placeholder="Email" />
+                </div>
+            </div>
+
+
+
+
+
+            <div class="row">
+                <div class="form-item col-12 padd-15">
+                    <input type="submit" value="Login" class="btn" onclick="setActionForm('login')">
+                    <input type="submit" value="Register" class="btn" onclick="setActionForm('register')">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+
+<!-- ===== Contact Section End ===== -->
+{% endblock %}
